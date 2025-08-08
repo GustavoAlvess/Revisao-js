@@ -208,14 +208,14 @@ if (vidaAtual < 2) {
 console.log("📜 === CONTINUAÇÃO DA JORNADA DE " + nomePersonagem + " ===");
 console.log("");
 
-// PRÓLOGO - Conexão com o Nível 1
+// PRÓLOGO - Conexão com o Nível 4
 console.log(
   "Após os eventos da " + localAtual + ", nosso herói " + nomePersonagem
 );
 console.log("da classe " + classe + " se depara com um novo desafio...");
 console.log("");
 
-// próximo nível
+// Nível 6
 
 poderInimigo += 80;
 
@@ -266,4 +266,63 @@ if (poderInimigo <= 0) {
 
 console.log("");
 console.log("🏁 FIM DO CAPÍTULO - Aguarde o próximo nível da aventura!");
+
+
+
+// === CONTINUAÇÃO DA SAGA ÉPICA ===
+// === NOVOS ELEMENTOS PARA O CASTELO DO JAGUAR ===
+// Inventário mágico - primeira coleção arcana
+let inventario = ["Boomerang de osso animal", "Dente de leão", "Couraça de urso"];
+let aliados = ["Dr. Bravestone", "Ruby", "Prof. Shelly Oberon"];
+let inimigosDerrotados = ["Capangas de Van Pelt", "Cobra peçonhenta", "bando de avestruzes","macacos", "Capangas de Jurgen"];
+let salasCastelo = ["Floresta Esmeralda", "Covil dos crocodilos", "Templo perdido"];
+let tesouroColetado = [];
+
+console.log("🏰 === " + nomePersonagem + " ADENTRA O CASTELO DO JAGUAR ===");
+console.log("Após as vitórias dos níveis anteriores, nosso herói chegou ao castelo lendário...");
+console.log("Inventário inicial: " + inventario.length + " itens mágicos:")
+for (let i = 0; i < inventario.length; i++) {
+  console.log(`- ${inventario[i]}`);
+};
+
+// === DESCOBERTA DOS TESOUROS DE JUMANJI ===
+console.log("");
+console.log("🗝️ Os baús do castelo");
+
+//  Declaração e inicialização
+let pocoesEncontradas = ["Cura", "Novas armas", "agilidade"];
+let armadilhasAtiradas = []; // Array vazio - será preenchido na aventura
+
+// Acesso e modificação de elementos
+console.log("🧪 Primeira poção encontrada: " + pocoesEncontradas[0]);
+console.log("⚗️ Total de poções mágicas: " + pocoesEncontradas.length);
+
+// Modificando elemento específico
+inventario[0] = "Poção de vida reserva"; // Upgrade da poção!
+console.log("✨ " + nomePersonagem + " aprimorou a poção de cura!");
+
+// Métodos de array fundamentais
+inventario.push("Cobra cajado"); // Adiciona no final
+console.log(" \n⚗️Novo item adicionado ao inventário!\n Inventário: ");
+for (let i = 0; i < inventario.length; i++) {
+  console.log(`- ${inventario[i]}`);
+};
+
+localAtual = "Castelo do Jaguar"
+console.log(`🔎${nomePersonagem}, você chegou ao lugar mais secreto de Jumanji... o ${localAtual}! E agora deve encontrar os tesouros escondidos nele.`);
+
+
+console.log(`- ${aliados[0]} precisou de uma arma para deixar fixa com ele, dê o ${inventario[3]}!`);
+console.log(`- ${aliados[0]} agradece!\n`);
+
+
+let itemRemovido = inventario.pop(); // Remove do final
+console.log("📤 Item removido: " + itemRemovido);
+console.log("🎒 Inventário atual: ");
+for (let i = 0; i < inventario.length; i++) {
+  console.log(`- ${inventario[i]}`);
+};
+
+
+
 
