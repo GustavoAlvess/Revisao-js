@@ -323,6 +323,106 @@ for (let i = 0; i < inventario.length; i++) {
   console.log(`- ${inventario[i]}`);
 };
 
+// === O RITUAL DA EXPLORAÇÃO ===
+console.log("");
+console.log("⚔️ Explorando as prisões sistemáticas");
 
+// Explorando cada sala do castelo usando for tradicional
+console.log("🗺️ Começando exploração das " + salasCastelo.length + " salas secretas...");
+
+for (let i = 0; i < salasCastelo.length; i++) {
+console.log("🚪 Sala " + (i + 1) + ": " + salasCastelo[i]);
+
+// Lógica diferente para cada sala baseada no índice
+if (i === 0) {
+console.log(`${nomePersonagem} encontra pergaminhos antigos!`);
+experiencia += 50;
+tesouroColetado.push("Pergaminhos antigos");
+} else if (i === 1) {
+console.log("Nova couraça encontrada!");
+tesouroColetado.push("Couraça de crocodilo");
+} else {
+console.log("Nada encontrado");
+}
+}
+
+console.log("📊 Exploração completa! XP: " + experiencia + " | Vida: " + vidaAtual);
+
+// ===  A UNIÃO DOS ALIADOS ===
+console.log("");
+console.log("Reunindo os Aliados de Jumanji");
+
+// Recrutando aliados com for tradicional
+console.log(`🏹 ${nomePersonagem} convoca seus aliados para a missão final:`);
+
+for (let i = 0; i < aliados.length; i++) {
+let aliado = aliados[i];
+console.log("⚡ Aliado " + (i + 1) + ": " + aliado + " se junta à missão!");
+
+// Cada posição no array determina habilidade especial
+if (i === 0) { // Primeiro aliado - Líder mágico
+console.log("🔮 Como líder mágico, " + aliado + " multiplica o poder da equipe!");
+ouro += 50;
+} else if (i === 1) { // Segundo aliado - Defensor
+console.log("🛡️ Como defensor principal, " + aliado + " fortalece a resistência!");
+vidaMaxima += 9;
+} else { // Demais aliados - Especialistas
+console.log("🏹 Como especialista, " + aliado + " aprimora táticas de combate!");
+experiencia += 40;
+}
+}
+
+console.log("🎖️ Equipe completa! Ouro: " + ouro + " | Vida máxima: " + vidaMaxima);
+
+// A MISSÃO FINAL DE JUMANJI ===
+console.log("");
+console.log("A MISSÃO FINAL DE JUMANJI");
+
+// Sistema de batalha usando arrays e for tradicional
+let inimigosBatalha = ["Guardião da esmeralda", "Capangas do Jaguar", "Jaguar interior"];
+let danoRecebido = [];
+
+console.log("💀 " + nomePersonagem + " enfrenta " + inimigosBatalha.length + " inimigos épicos!");
+
+// Batalha usando for tradicional para controle preciso
+for (let i = 0; i < inimigosBatalha.length; i++) {
+let inimigo = inimigosBatalha[i];
+let dano = Math.floor(Math.random() * 30) + 10; // Dano entre 10 e 39
+
+console.log("⚔️ Rodada " + (i + 1) + " - Enfrentando: " + inimigo);
+console.log("💥 " + nomePersonagem + " causa " + dano + " de dano!");
+
+danoRecebido.push(dano); // Armazena dano para cálculos posteriores
+
+// Lógica especial para cada rodada baseada no índice
+if (i === 0) {
+console.log("💎 Primeira vitória! Cristais fragmentados concedem bônus!");
+tesouroColetado.push("Fragmento de Cristal");
+} else if (i === 1) {
+console.log("🌑 Segunda batalha! Os capangas estão armados, mas " + aliados[i] + " resiste!");
+vidaMaxima -= 2;
+} else {
+console.log("🔥 Batalha final! O Jaguar recua! Vitória épica alcançada!");
+experiencia += 100;
+tesouroColetado.push("Olho de Jaguar");
+}
+}
+
+// Calculando estatísticas da batalha usando for tradicional
+let danoTotal = 0;
+for (let i = 0; i < danoRecebido.length; i++) {
+danoTotal += danoRecebido[i];
+console.log("📊 Rodada " + (i + 1) + " - Dano: " + danoRecebido[i]);
+}
+
+console.log("⚡ Dano total causado: " + danoTotal);
+console.log("⚡ Vida atual da equipe: " + vidaMaxima);
+console.log("🏆 Tesouros coletados: " + tesouroColetado.length + " itens épicos adicionados ao inventário!");
+
+inventario.push(tesouroColetado)
+console.log("🎒 Inventário atual: ");
+for (let i = 0; i < inventario.length; i++) {
+  console.log(`- ${inventario[i]}`);
+};
 
 
