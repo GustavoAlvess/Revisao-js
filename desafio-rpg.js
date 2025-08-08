@@ -171,3 +171,98 @@ if (experiencia >= 750) {
   );
   console.log("Sabedoria atual: " + experiencia + "/100");
 }
+
+//  Nível 5: A Fruta do Deserto
+console.log(" Nível 5: A Fruta do Deserto");
+let poderInimigo = 12;
+
+// Sistema de combate inteligente baseado na situação
+if (vidaAtual < 2) {
+  console.log(
+    "Com uma vida restante, " + nomePersonagem + " usa uma tática desesperada!"
+  );
+  console.log("Ataque final com toda a força restante!");
+  poderInimigo -= forca * 2;
+} else if (manaAtual >= 30 && classe === "zoologista") {
+  console.log(
+    "✨ " +
+      nomePersonagem +
+      " utilizou de suas habilidades, detectou o ponto fraco do inimigo e... pimba! Ataque certeiro!"
+  );
+  console.log("Habilidade devastadora!");
+  poderInimigo -= forca + 20;
+  manaAtual -= 30;
+  if (poderInimigo <= 0) {
+    console.log("Macacos derrotados!");
+    combatesVencidos++;
+    manaAtual += 50;
+  }
+} else if (forca >= 15) {
+  console.log("Com muita força, executa um ataque certeiro!");
+  poderInimigo -= forca;
+} else {
+  console.log("🛡️ Luta defensiva e calculada!");
+  poderInimigo -= forca / 2;
+  vidaAtual++; // Recupera um pouco de vida
+}
+console.log("📜 === CONTINUAÇÃO DA JORNADA DE " + nomePersonagem + " ===");
+console.log("");
+
+// PRÓLOGO - Conexão com o Nível 1
+console.log(
+  "Após os eventos da " + localAtual + ", nosso herói " + nomePersonagem
+);
+console.log("da classe " + classe + " se depara com um novo desafio...");
+console.log("");
+
+// próximo nível
+
+poderInimigo += 80;
+
+if (vidaAtual < 2) {
+  console.log(
+    "Com uma vida restante, " + nomePersonagem + " usa uma tática desesperada!"
+  );
+  console.log("Ataque final com toda a força restante!");
+  poderInimigo -= forca * 2;
+} else if (manaAtual >= 30 && classe === "zoologista") {
+  console.log(
+    "✨ " +
+      nomePersonagem +
+      " utilizou de suas armas, e junto com sua equipe fez um ataque certeiro aos capangas de Jurgen!"
+  );
+  console.log("Muito bem!");
+  poderInimigo -= forca + 50;
+  manaAtual -= 30;
+  if (poderInimigo <= 0) {
+    console.log("Jurgen derrotado!");
+    combatesVencidos++;
+    experiencia += 150
+  }
+} else if (forca >= 15) {
+  console.log("Com muita força, executa um ataque certeiro!");
+  poderInimigo -= forca;
+} else {
+  console.log("🛡️ Luta defensiva e calculada!");
+  poderInimigo -= forca / 2; // Recupera um pouco de vida
+}
+
+// [Aqui você implementa os 3 capítulos com os conceitos das etapas anteriores]
+
+// EPÍLOGO - Resultado final
+if (poderInimigo <= 0) {
+  console.log("\n🎉 VITÓRIA ÉPICA! " + nomePersonagem + " triunfa! Com sua equipe, derrota Junger e seus capangas, cumprindo a missão de devolver as joias aos seus donos! ");
+  experiencia += 100;
+  combatesVencidos++;
+  console.log("A lenda de " + nomePersonagem + " cresce...");
+} else {
+  console.log(
+    "⚔️ A batalha foi árdua, mas " +
+      nomePersonagem +
+      " sobrevive para lutar outro dia!"
+  );
+}
+
+console.log("");
+console.log("🏁 FIM DO CAPÍTULO - Aguarde o próximo nível da aventura!");
+
