@@ -425,4 +425,35 @@ for (let i = 0; i < inventario.length; i++) {
   console.log(`- ${inventario[i]}`);
 };
 
+// EPÍLOGO: O MESTRE DE JUMANJI
+console.log("");
+console.log("👑 EPÍLOGO: " + nomePersonagem + " - CONQUISTADOR DE JUMANJI");
 
+// Estatísticas finais da jornada
+console.log("📈 Estatísticas Finais da Aventura:");
+console.log("• Nível alcançado: " + nivelPersonagem);
+console.log("• Experiência total: " + experiencia);
+console.log("• Vida restante: " + vidaAtual + "/" + vidaMaxima + "vida da equipe");
+console.log("• Ouro acumulado: " + ouro);
+console.log("• Itens no inventário: " + inventario.length);
+console.log("• Aliados conquistados: " + aliados.length);
+console.log("• Tesouros épicos: " + tesouroColetado.length);
+
+// === ADICIONE SUAS 10+ LINHAS ÉPICAS DE CONTINUAÇÃO AQUI ===
+console.log("");
+console.log("🌟 A LENDA CONTINUA...");
+console.log("Após conquistar o Castelo do Jaguar, " + nomePersonagem + " saiu do jogo.");
+console.log("Suas habilidades corriam em suas veias e permaneceram mesmo estando longe de Jumanji.");
+console.log("Cada missão exigiu mais de seus pensamentos e de sua inteligência.");
+console.log("Os guardas de jumanji deixaram mensagens que te marcaram eternamente.");
+console.log("Aliados admiravam sua capacidade de organizar caos em estruturas harmoniosas.");
+console.log("O inventário repleto de artefatos lendários brilhava com poder recém-descoberto.");
+console.log("Mas no horizonte, novas aventuras aguardavam " + nomePersonagem);
+console.log("Seus aliados reconheceram sua evolução e desenvolvimento pessoal fora do jogo.");
+console.log("Suas lendárias armas foram eternizadas no Castelo, como um museu aos moradores de Jumanji");
+console.log("A jornada estava longe do fim - era apenas o início de uma saga maior.");
+console.log("Pois " + nomePersonagem + " havia provado ser digno do título supremo:");
+console.log("⚡ ZOOLOGISTA ETERNO DE JUMANJI ⚡");
+
+console.log("");
+console.log("🎯 FIM DO NÍVEL 5 | AGUARDE FUTURAS AVENTURAS NA ACADEMIA DOS CÓDIGOS! 🎯");
